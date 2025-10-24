@@ -1,0 +1,7 @@
+order_id,product,quantity,unit_price,order_date
+101,Keyboard,2,45.99,2025-01-05
+102,Mouse,1,25.49,2025-01-05
+103,Monitor,3,179.00,2025-01-06
+104,Laptop,1,999.99,2025-01-06
+105,HDMI Cable,4,9.99,2025-01-07
+106,Headphones,2,79.50,2025-01-07
