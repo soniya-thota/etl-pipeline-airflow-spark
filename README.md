@@ -4,8 +4,6 @@
 This project demonstrates a simple end-to-end ETL workflow:
 Extract CSV → Transform with Pandas → Load to AWS S3 using Airflow.
 
-## Architecture
-![Architecture Diagram](docs/etl_architecture.png)
 
 ## Stack
 - Python, Airflow
