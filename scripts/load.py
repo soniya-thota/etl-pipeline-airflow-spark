@@ -1,7 +1,20 @@
-import boto3
+import os
 
-def load_to_s3(df, bucket_name, key):
-    s3 = boto3.client('s3')
-    df.to_csv('/tmp/final_output.csv', index=False)
-    s3.upload_file('/tmp/final_output.csv', bucket_name, key)
-    print(f"Data loaded to s3://{bucket_name}/{key}")
+def load_to_local(df):
+    # ensure 'output' folder exists
+    os.makedirs('output', exist_ok=True)
+
+    output_path = os.path.join('output', 'final_output.csv')
+    df.to_csv(output_path, index=False)
+
+    print(f"✅ Data successfully saved to: {output_path}")
+    print(df.head())  # show preview of saved data
+
+
+if __name__ == "__main__":
+    from extract import extract_data
+    from transform import transform_data
+
+    df = extract_data()
+    df = transform_data(df)
+    load_to_local(df)
