@@ -7,7 +7,7 @@ def load_to_local(df):
     output_path = os.path.join('output', 'final_output.csv')
     df.to_csv(output_path, index=False)
 
-    print(f"✅ Data successfully saved to: {output_path}")
+    print(f" Data successfully saved to: {output_path}")
     print(df.head())  # show preview of saved data
 
 
@@ -18,3 +18,4 @@ if __name__ == "__main__":
     df = extract_data()
     df = transform_data(df)
     load_to_local(df)
+
